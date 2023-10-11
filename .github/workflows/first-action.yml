@@ -1,0 +1,20 @@
+# Workflow name
+name: First Workflow 
+
+# Events
+on: workflow_dispatch
+
+# Tasks to do
+jobs: 
+  first-ob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greetings
+        run: echo "Hello world"
+      - name: Print Working"
+        run: echo "Working"
+      - name: Print Goodbye"
+        run: echo "Goodbye"
+    
+  
+  

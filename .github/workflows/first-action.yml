@@ -2,7 +2,7 @@
 name: First Workflow 
 
 # Events
-on: workflow_dispatch
+on: push
 
 # Tasks to do
 jobs: 

@@ -4,7 +4,6 @@ version = "0.1.0"
 description = "Learn how to use poetry"
 authors = ["bartello88 <bartello88@gmail.com>"]
 readme = "README.md"
-packages = [{include = "poetry_sample_package"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"

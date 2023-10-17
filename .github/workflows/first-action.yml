@@ -35,8 +35,8 @@ jobs:
       - name: Install depedencies
         run: python -m poetry install
 
-      - name: Create venv
-        run: python -m poetry shell
+      - name: Check depedencies
+        run: python -m poetry show
 
       - name: Run tests
         run: run pytest

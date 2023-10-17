@@ -1,22 +1,43 @@
 # Workflow name
-name: First Workflow 
+name: First Workflow
 
 # Events
 on: push
 
 # Tasks to do
-jobs: 
+jobs:
   first-ob:
     runs-on: ubuntu-latest
     steps:
       - name: Print greetings
         run: echo "Hello world"
+
       - name: Print Working"
         run: echo "Working"
+
       - name: Print Working2"
         run: echo "Working2
+
       - name: Print Goodbye"
         run: echo "Goodbye"
+
+      - name: Get code
+        uses: actions/checkout@c3
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10.0
+
+      - name: Instal Poetry
+        run: python -m pip install poetry==1.1.11
+
+      - name: Install depedencies
+        run: python -m poetry install
+
+      - name: Run tests
+        run: run pytest
+
 
   
   

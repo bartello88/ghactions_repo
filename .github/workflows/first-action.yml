@@ -43,11 +43,11 @@ jobs:
 
       - name: Run tests
         run: poetry run pytest
-    second-ob:
-      runs-on: windows-latest
-      steps:
-        - name: Print greetings form job nr 2
-          run: echo "Hello world from job nr 2"
+  second-ob:
+    runs-on: windows-latest
+    steps:
+      - name: Print greetings form job nr 2
+        run: echo "Hello world from job nr 2"
 
   
   

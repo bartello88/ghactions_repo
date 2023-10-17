@@ -2,3 +2,4 @@
 /venv
 .github/workflows/.pytest_cache
 /tests/.pytest_cache
+poetry.lock

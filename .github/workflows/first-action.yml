@@ -39,7 +39,7 @@ jobs:
         run: python -m poetry show
 
       - name: Run tests
-        run: run pytest
+        run: python -m run pytest
 
 
   

@@ -43,14 +43,6 @@ jobs:
       - name: Active venv
         run: source $(poetry env info --path)/bin/activate
 
-      - name: cache venv
-        uses: actions/cache@v2
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
-      - run: poetry install
-      - run: poetry run pytest tests
-
       - name: Run tests
         run: poetry run pytest
   second-ob:

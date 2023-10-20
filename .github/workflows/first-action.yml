@@ -54,8 +54,9 @@ jobs:
 
       - name: Run tests
         run: |
-          poetry run pytest
           python flask_app.py
+          poetry run pytest
+
   second-ob:
     runs-on: windows-latest
     steps:

@@ -43,8 +43,13 @@ jobs:
       - name: Active venv
         run: source $(poetry env info --path)/bin/activate
 
-      - name: Run flask
-        run: flask --version
+      - name: cache venv
+        uses: actions/cache@v2
+        with:
+          path: .venv
+
+      - run: poetry install
+      - run: poetry run pytest tests
 
       - name: Run tests
         run: poetry run pytest

@@ -36,7 +36,9 @@ jobs:
         run: python -m poetry install --no-interaction --no-root
 
       - name: Check depedencies
-        run: python -m poetry show
+        run: |
+          python -m poetry show
+          flask --version
 
       - name: Active venv
         run: source $(poetry env info --path)/bin/activate

@@ -48,12 +48,14 @@ jobs:
           poetry env info
 
       - name: Active venv
-        run: source $(poetry env info --path)/bin/activate
-      - name: Run flask
-        run: python flask_app.py
+        run: |
+          source $(poetry env info --path)/bin/activate
+          poetry env info
 
       - name: Run tests
-        run: poetry run pytest
+        run: |
+          poetry run pytest
+          python flask_app.py
   second-ob:
     runs-on: windows-latest
     steps:

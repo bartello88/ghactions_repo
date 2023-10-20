@@ -14,5 +14,5 @@ def test_sum3_function():
     assert sum(4,10) == 14
 
 def test_flask_app():
-    r = requests.get("http://127.0.0.1:5000")
+    r = requests.get("https://www.wp.pl/")
     assert r.status_code==200

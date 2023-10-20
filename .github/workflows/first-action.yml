@@ -37,10 +37,8 @@ jobs:
 
       - name: Check depedencies
         run: |
-          poetry add flask
           python -m poetry show
           poetry env info
-          flask --version
 
 #      - name: Active venv
 #        run: source $(poetry env info --path)/bin/activate

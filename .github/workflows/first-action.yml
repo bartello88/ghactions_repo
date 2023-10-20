@@ -37,6 +37,7 @@ jobs:
 
       - name: Check depedencies
         run: |
+          poetry add flask
           python -m poetry show
           poetry env info
           flask --version
@@ -50,7 +51,7 @@ jobs:
           python -m poetry show
 
       - name: Run flask
-        run: python "flask_app.py"
+        run: poetry run flask run
 
       - name: Run tests
         run: poetry run pytest

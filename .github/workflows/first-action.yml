@@ -32,16 +32,20 @@ jobs:
       - name: Instal Poetry
         run: python -m pip install poetry==1.1.11
 
-      - name: Active venv
-        run: source $(poetry env info --path)/bin/activate
-
       - name: Install depedencies
         run: python -m poetry install --no-interaction --no-root
 
       - name: Check depedencies
         run: |
           python -m poetry show
-          flask --version
+
+      - name: Active venv
+        run: source $(poetry env info --path)/bin/activate
+
+      - name: Check depedencies
+        run: |
+          python -m poetry show
+          python -m poetry show
 
       - name: Run flask
         run: python "flask_app.py"

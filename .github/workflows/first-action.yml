@@ -48,7 +48,7 @@ jobs:
           python -m poetry show
 
       - name: Run flask
-        run: flask --app flask_app run
+        run: python -m flask_app.py
 
       - name: Run tests
         run: poetry run pytest

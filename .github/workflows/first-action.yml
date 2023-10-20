@@ -38,7 +38,8 @@ jobs:
       - name: Check depedencies
         run: |
           python -m poetry show
-          poetry env info 
+          poetry env info
+          flask --version
 
 #      - name: Active venv
 #        run: source $(poetry env info --path)/bin/activate

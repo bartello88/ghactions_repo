@@ -56,7 +56,6 @@ jobs:
 
       - name: Active venv
         run: |
-          source $(poetry env info --path)/bin/activate
           poetry env info
           poetry env info
 
